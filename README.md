@@ -1,3 +1,9 @@
+# About this repo
+Follow along with me as I build my first application in Ember JS. I am following
+a tutorial through the Ember Guides to develop this project, which aims to display 
+various rental properties.
+
+
 # super-rentals
 
 This README outlines the details of collaborating on this Ember application.
