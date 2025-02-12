@@ -1,16 +1,14 @@
 import EmberRouter from '@ember/routing/router';
-import config from './config/environment';
+import config from 'super-rentals/config/environment';
 
-const Router = EmberRouter.extend({
-  location: config.locationType,
-  rootURL: config.rootURL,
+export default class Router extends EmberRouter {
+    location = config.locationType;
+    rootURL = config.rootURL;
+};
+
+Router.map(function() {
+    this.route('rentals'); //should map rentals page to '/'
+    this.route('about'); //tells Ember router to run the about.js
+			//file when visitor navigates to about page
+    this.route('contact');
 });
-
-Router.map(function () {
-  this.route('about'); //tells Ember router to run the about.js
-  //file when visitor navigates to about page
-  this.route('contact');
-  this.route('rentals');
-});
-
-export default Router;
