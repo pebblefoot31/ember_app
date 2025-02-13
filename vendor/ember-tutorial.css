@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic");
+
 /**
  * Base Elements
  */
@@ -19,7 +20,9 @@ p,
 div,
 span,
 a {
-  font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-family:
+    Lato, "Open Sans", "Helvetica Neue", "Segoe UI", Helvetica, Arial,
+    sans-serif;
   line-height: 1.5;
 }
 
@@ -36,12 +39,13 @@ p {
   line-height: 1.5;
   margin-bottom: 15px;
 }
+
 /**
  * Button
  */
 
 .button {
-  padding: 10px 30px 10px;
+  padding: 10px 30px;
   text-decoration: none;
   color: #fff;
   background: #016aba;
@@ -56,6 +60,7 @@ p {
 .button:hover {
   opacity: 1;
 }
+
 /**
  * Body Container
  */
@@ -66,14 +71,13 @@ p {
   background: #f9f9f9;
   margin: 0 auto;
 }
+
 /**
  * Top Navigation
  */
 
 .menu {
   height: 4em;
-  background-color: #677ae4;
-  background-color: #05526A;
   background-color: #e46855;
 }
 
@@ -120,7 +124,7 @@ p {
   font-size: 18px;
   width: 500px;
   margin: 50px auto;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgb(255 255 255 / 75%);
   border: solid 1px lightgray;
   display: block;
 }
@@ -154,8 +158,8 @@ p {
   top: 54px;
   left: 10px;
   background-color: #f6f6f6;
-  border-right: 1px solid rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgb(0 0 0 / 5%);
+  border-bottom: 1px solid rgb(0 0 0 / 5%);
 }
 
 .results li {
@@ -166,6 +170,7 @@ p {
 .menu .results li:hover {
   background: #f3f3f3;
 }
+
 /**
  * Content Area
  */
@@ -173,6 +178,7 @@ p {
 .body {
   padding: 15px;
 }
+
 /**
  * Similar to Jumbotron
  */
@@ -250,7 +256,7 @@ p {
   cursor: pointer;
   margin: auto;
   flex: 25%;
-  flex-grow:1;
+  flex-grow: 1;
 }
 
 .listing small {
@@ -270,7 +276,7 @@ p {
 }
 
 .listing .map-container {
-  flex-grow:1;
+  flex-grow: 1;
   flex: 25%;
 }
 
@@ -283,9 +289,8 @@ p {
   flex-grow: 2;
   flex: 50%;
   display: flex;
-  justify-content: space-between;
+  place-content: space-around space-between;
   flex-wrap: wrap;
-  align-content: space-around;
 }
 
 .listing .detail {
@@ -370,20 +375,22 @@ p {
 }
 
 .tomster {
-    background: url(../assets/images/teaching.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 200px;
-    width: 200px;
-
-    position: relative;
-    top: -50px;
+  background: url("../assets/images/teaching.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  top: -50px;
 }
 
-.screen-reader{
+.screen-reader {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
-  height: 1px; width: 1px;
-  margin: -1px; padding: 0; border: 0;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
