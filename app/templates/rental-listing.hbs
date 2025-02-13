@@ -9,13 +9,15 @@
 {{!-- the 'each' keyword allows us to loop through each object and apply this formatting to it. --}}
 {{#each this.model as |rentalUnit|}}
   <article class="listing">
-    <a class="image {{if this.isWide "wide"}}" role="button">
-	<img src={{this.rental.image}} alt="">
-	<small>View Larger</small>
+
+     <a
+	{{action "toggleImageSize"}}
+    	class="image {{if this.isWide 'wide'}}"
+	role="button">
+	 <img src={{rentalUnit.image}} alt="{{rentalUnit.title}}"/>
+    	<small>View Larger</small>
     </a>
-    <div class="detail image">
-      <img src="{{rentalUnit.image}}" alt="{{rentalUnit.title}}"/>
-    </div>
+
     <div class="details">
       <h3>{{rentalUnit.title}}</h3>
       <div class="detail owner">
@@ -30,6 +32,9 @@
       <div class="detail bedrooms">
         <span>Number of bedrooms:</span> {{rentalUnit.bedrooms}}
       </div>
+
     </div>
+
   </article>
 {{/each}}
+
