@@ -1,10 +1,11 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
 
-export default Component.extend({
-  isWide: false,
-  actions: {
-    toggleImageSize() {
-      this.toggleProperty('isWide');
-    },
-  },
-});
+export default class RentalImageComponent extends Component {
+  @tracked
+  isWide = false;
+
+  @action toggleSize() {
+    this.isWide = !this.isWide;
+  }
+}

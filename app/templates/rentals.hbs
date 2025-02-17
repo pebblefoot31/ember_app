@@ -10,19 +10,17 @@
 {{#each this.model as |rentalUnit|}}
   <article class="listing">
     <a class="image {{if this.isWide "wide"}}" role="button">
-	<img src={{this.rental.image}} alt="">
+	<img src={{rentalUnit.image}} alt="">
 	<small>View Larger</small>
     </a>
-    <div class="detail image">
-      <img src="{{rentalUnit.image}}" alt="{{rentalUnit.title}}"/>
-    </div>
+
     <div class="details">
       <h3>{{rentalUnit.title}}</h3>
       <div class="detail owner">
         <span>Owner:</span> {{rentalUnit.owner}}
       </div>
       <div class="detail type">
-        <span>Type:</span> {{rentalUnit.category}}
+	  <span>Type:</span> {{rental-property-type rentalUnit.category}} - {{rentalUnit.category}}
       </div>
       <div class="detail location">
         <span>Location:</span> {{rentalUnit.city}}
